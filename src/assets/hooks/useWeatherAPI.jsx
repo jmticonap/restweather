@@ -4,6 +4,7 @@ import axios from 'axios'
 const useWeatherAPI = () => {
     const huarmey = { latitude: -10.0707608, longitude: -78.150556 }
     const [isMetric, setIsMetric] = useState(true)
+    const [currentGeolocation, setCurrentGeolocation] = useState()
     const [geolocation, setGeolocation] = useState(huarmey)
     const [data, setData] = useState()
 
@@ -15,17 +16,18 @@ const useWeatherAPI = () => {
         }
     }
     const getGeolocation = (pos) => {
+        setCurrentGeolocation(pos.coords)
         setGeolocation(pos.coords)
     }
     const failGeolocation = (err) => {
-        console.log(err)
         setGeolocation(huarmey)
     }
+    const setLocation = location => setGeolocation(location?location:currentGeolocation)
 
     useEffect(() => navigator.geolocation.getCurrentPosition(getGeolocation, failGeolocation), [])
     useEffect(() => loadData(), [geolocation, isMetric])
 
-    return { data, isMetric, setIsMetric }
+    return { data, isMetric, setIsMetric, setLocation }
 };
 
 export default useWeatherAPI;

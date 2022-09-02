@@ -1,7 +1,32 @@
-.card-weather{
-    background-color: rgb(121, 121, 121);
+.main-container{
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0;
+
+    background-color: rgba(121, 121, 121, 0.8);
     padding: 3rem;
     border-radius: 2rem;
+    top: 8.5rem;
+}
+.others-cities-container{
+    
+}
+.others-cities-container ul{
+    position: absolute;
+    top: 12rem;
+    left: 0;
+    text-align: left;
+}
+.others-cities-container button{
+    padding: 1rem 2rem;
+}
+
+
+.card-weather{
+    
 }
 
 .card-weather>section {
@@ -33,6 +58,7 @@
     flex-direction: column;
     flex-wrap: nowrap;
     row-gap: 1rem;
+    font-size: 1.5rem;
 }
 .weather-details li{
     display: flex;
@@ -45,7 +71,14 @@
 
 
 @media screen and (min-width: 800px) {
+    .main-container{
+        top: 0;
+    }
     .flex-horizontal {
         flex-direction: row !important;
     }
+    .others-cities-container ul{
+        top: 2rem;
+    }
+
 }
