@@ -22,6 +22,15 @@
 }
 .others-cities-container button{
     padding: 1rem 2rem;
+    border-top-right-radius: 3rem;
+    background-color: darkorange;
+    border: none;
+    margin: 0.125rem 0;
+    width: 8rem;
+}
+.others-cities-container button:hover{
+    background-color: rgb(255, 191, 113);
+    width: 8.5rem;
 }
 
 
