@@ -1,0 +1,44 @@
+.card-weather{
+    background-color: rgb(121, 121, 121);
+    padding: 3rem;
+    border-radius: 2rem;
+}
+
+.card-weather>section {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    row-gap: 1rem;
+    align-items: center;
+}
+.flex-horizontal {
+    display: flex;
+    flex-direction: column !important;
+    column-gap: 5rem;
+}
+
+.btn-degrees{
+    padding: 1rem 2rem;
+}
+.weather-details{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    row-gap: 1rem;
+}
+.weather-details li{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    justify-content: left;
+    row-gap: 2rem;
+}
+
+
+@media screen and (min-width: 800px) {
+    .flex-horizontal {
+        flex-direction: row !important;
+    }
+}

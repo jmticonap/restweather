@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans&family=Russo+One&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  list-style: none;
+}
+
+body{
+  font-family: 'Encode Sans', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Russo One', sans-serif;
+}
+
