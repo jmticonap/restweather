@@ -12,6 +12,13 @@
     row-gap: 1rem;
     align-items: center;
 }
+
+.card-weather img {
+    width: 30rem;
+    height: auto;
+    object-fit: contain;
+}
+
 .flex-horizontal {
     display: flex;
     flex-direction: column !important;
