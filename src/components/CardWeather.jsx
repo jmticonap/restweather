@@ -13,11 +13,6 @@ const CardWeather = () => {
         setIsMetric, 
         setLocation } = useWeatherAPI()
 
-    
-    console.log(`SUNSET : ${weather.sys.sunset}`)
-    console.log(`CURRENT TIMESTAMP: ${Math.floor(Date.now()/1000)}`)
-    console.log(`ES DE ${ Math.floor(Date.now()/1000)>= weather.sys.sunset?'NOCHE':'DIA'}`)
-
     return (
         <div className='main-container'>
             <div className='others-cities-container'>
